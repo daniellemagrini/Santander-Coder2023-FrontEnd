@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+th, td {
+    border: 1.5px solid #D3D3D3;
+    padding: 0.7rem;
+    border-collapse: collapse;
+  }
+
+table {
+    border-collapse: collapse;
+}
+
+thead, th {
+    width: 25%;
+    padding: 1.3rem;
+}
+
+  .tbHead__planosBranco {
+    border: none;
+  }
+
+  .Titulo {
+    text-align: left;
+    padding-left: 0.5rem;
+  }
+
+  .infoPlanos {
+    text-align: center;
+  }
+
+  .tbBody__linha__precoMensalBasico, .tbBody__linha__precoMensalPadrao, .tbBody__linha__precoMensalAvancado {
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+
+  .tbFoot__escolhaBasico__bt, .tbFoot__escolhaPadrao__bt, .tbFoot__escolhaAvancado__bt {  
+    color: #ffffff;
+    font-size: 1rem;
+  }
+
+  .tbBody__linha__precoMensalBasico, .tbFoot__escolhaBasico__bt {
+    background-color: #7ebef3;
+  }
+
+  .tbBody__linha__precoMensalPadrao, .tbFoot__escolhaPadrao__bt {
+    background-color: #4c86ec;
+  }
+
+  .tbBody__linha__precoMensalAvancado, .tbFoot__escolhaAvancado__bt {
+    background-color: #7273ec;
+  }
+
+  .tbFoot__escolhaBasico__bt, .tbFoot__escolhaPadrao__bt, .tbFoot__escolhaAvancado__bt {
+    padding: 0.5rem 3rem;
+    display: block;
+    margin: 0.5rem auto;
+  }

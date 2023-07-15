@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela de Planos</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <table>       
+        <thead class="tbHead">
+            <th class="tbHead__planosBranco"><!--Espaço em branco--></th>
+            <th class="tbHead__planos">Básico</th>
+            <th class="tbHead__planos">Padrão</th>
+            <th class="tbHead__planos">Avançado</th>
+        </thead>
+        <tbody class="tbBody">
+            <tr class="tbBody__linha">
+                <td class="tbBody__linha__precoMensal Titulo">Preço mensal</td>
+                <td class="tbBody__linha__precoMensalBasico infoPlanos">R$ 29</td>
+                <td class="tbBody__linha__precoMensalPadrao infoPlanos">R$ 59</td>
+                <td class="tbBody__linha__precoMensalAvancado infoPlanos">R$ 139</td>
+            </tr>
+            <tr class="tbBody__linha">
+                <td class="tbBody__linha__comercial Titulo">Comercial</td>
+                <td class="tbBody__linha__comercial infoPlanos">1 usuário completo</td>
+                <td class="tbBody__linha__comercial infoPlanos">5 usuários completos</td>
+                <td class="tbBody__linha__comercial infoPlanos">Usuários personalizados</td>
+            </tr>
+            <tr class="tbBody__linha">
+                <td class="tbBody__linha__usuarios Titulo">Usuários ilimitados somente leitura</td>
+                <td class="tbBody__linha__usuarios infoPlanos">1.000 visualizações de email</td>
+                <td class="tbBody__linha__usuarios infoPlanos">2.000 visualizações de email</td>
+                <td class="tbBody__linha__usuarios infoPlanos">Visualizações de email personalizadas</td>
+            </tr>
+            <tr class="tbBody__linha">
+                <td class="tbBody__linha__contatos Titulo">Contatos</td>
+                <td class="tbBody__linha__contatos infoPlanos">5 contatos por cliente</td>
+                <td class="tbBody__linha__contatos infoPlanos">25 contatos por cliente</td>
+                <td class="tbBody__linha__contatos infoPlanos">Contatos ilimitados</td>
+            </tr>
+            <tr class="tbBody__linha">
+                <td class="tbBody__linha__cafe Titulo">Café</td>
+                <td class="tbBody__linha__cafe infoPlanos">5 xícaras</td>
+                <td class="tbBody__linha__cafe infoPlanos">8 xícaras</td>
+                <td class="tbBody__linha__cafe infoPlanos">10 xícaras</td>
+            </tr>       
+            <tfoot class="tbFoot">
+                <td class="tbFoot__escolha Titulo"><!--Espaço em branco--></td>
+                <td class="tbFoot__escolhaBasico">
+                    <button class="tbFoot__escolhaBasico__bt">Escolha o plano</button>
+                </td>
+                <td class="tbFoot__escolhaPadrao">
+                    <button class="tbFoot__escolhaPadrao__bt">Escolha o plano</button>
+                </td>
+                <td class="tbFoot__escolhaAvancado">
+                    <button class="tbFoot__escolhaAvancado__bt">Escolha o plano</button>
+                </td>
+            </tfoot>
+        </tbody>
+    </table>
+</body>
+</html>
