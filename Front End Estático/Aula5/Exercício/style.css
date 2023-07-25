@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-padding-top: 10rem;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(241, 242, 241);
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;   
+    z-index: 1;
+}
+
+.title, .footerDir {
+    background-color: rgb(28, 148, 20);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 1.5rem;
+    letter-spacing: 0.1rem;
+}
+
+.title > h4 {
+    padding-top: 1rem;
+}
+
+.nav {
+    background-color: rgb(243, 249, 243);
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav > a {
+    text-decoration: none;
+    font-weight: 600;
+    color: rgb(176, 73, 73);
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+}
+
+a:hover {
+    background-color: rgb(220, 236, 220);
+}
+
+main {
+    width: 50%;
+    margin: 10rem auto auto auto;
+    background-color: rgb(255, 255, 255);
+    padding: 0.5rem;
+}
+
+.catalogo__title{
+    padding: 1.5rem;
+}
+
+.catalogo__produtos {
+    border-bottom: 1px solid rgba(214, 213, 213, 0.342);
+    padding: 0.4rem 1.5rem;
+    text-align: left;
+    margin-bottom: 1rem;
+    display: flex;
+}
+
+.catalogo__produtoFigure__img {
+    width: 8rem;
+    height: 6rem;
+}
+
+.catalogo__produtoTxt {
+    padding: 0.2rem 0.7rem;
+}
+
+.catalogo__produtoTxt h2 {
+    margin-bottom: 1.2rem;
+}
+
+th, td {
+    border: 1.5px solid rgba(177, 177, 177, 0.342);
+    padding: 0.7rem;
+    border-collapse: collapse;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.tabelaPreco__tb {
+    width: 100%;
+}
+
+.tabelaPreco {
+    margin: 0.5rem 1.5rem 1.5rem 1.5rem;
+}
+
+.table h2 {
+    padding: 0.5rem 1.5rem;
+}
+
+.tbHead {
+    background-color: rgb(241, 242, 241);
+}
+
+.cadastro h2 {
+    padding: 0.5rem 1.5rem;
+}
+
+.formCadastro {
+    border: 2px solid rgb(244, 239, 239);
+    box-shadow: 2rem;
+    margin: 0.5rem 1.5rem 1.5rem 1.5rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.inputWidth {
+    width: 100%;
+    padding: 0.4rem;
+    margin: 0.5rem 0 1rem 0;
+    border: 2px solid rgb(198, 204, 198);
+    box-shadow: 2rem;
+    border-radius: 0.4rem;
+}
+
+.botaoenviar {
+    background-color: rgb(28, 148, 20);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    width: 100%;
+    padding: 0.7rem;
+    font-weight: 700;
+    font-size: large;
+    border-radius: 0.4rem;
+}
+

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio Aula 5</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="title">
+            <h1>Cardápio/Catálogo Digital</h1>
+            <h4>Confira nossos produtos deliciosos!</h4>
+        </div>
+        <nav class="nav">
+            <a href="#catalogo">Catálogo</a>
+            <a href="#table">Tabela de Preços</a>
+            <a href="#cadastro">Cadastro</a>
+        </nav>
+    </header>   
+    <main class="main">
+        <section id="catalogo" class="catalogo">
+            <h2 class="catalogo__title">Cardápio/Catálogo</h2>
+            <div class="catalogo__produtos">
+                <figure class="catalogo__produtoFigure">
+                    <img class="catalogo__produtoFigure__img" src="./img/produto.jpeg" alt="imagem do produto">
+                </figure>
+                <div class="catalogo__produtoTxt">
+                    <h2>Produto 1</h2>
+                    <p>Descrição do produto 1</p>
+                </div>
+            </div>
+            <div class="catalogo__produtos">
+                <figure class="catalogo__produtoFigure">
+                    <img class="catalogo__produtoFigure__img" src="./img/produto.jpeg" alt="imagem do produto">
+                </figure>
+                <div class="catalogo__produtoTxt">
+                    <h2>Produto 2</h2>
+                    <p>Descrição do produto 2</p>
+                </div>
+            </div>
+            <div class="catalogo__produtos">
+                <figure class="catalogo__produtoFigure">
+                    <img class="catalogo__produtoFigure__img" src="./img/produto.jpeg" alt="imagem do produto">
+                </figure>
+                <div class="catalogo__produtoTxt">
+                    <h2>Produto 3</h2>
+                    <p>Descrição do produto 3</p>
+                </div>
+            </div>
+            <div class="catalogo__produtos">
+                <figure class="catalogo__produtoFigure">
+                    <img class="catalogo__produtoFigure__img" src="./img/produto.jpeg" alt="imagem do produto">
+                </figure>
+                <div class="catalogo__produtoTxt">
+                    <h2>Produto 4</h2>
+                    <p>Descrição do produto 4</p>
+                </div>
+            </div>
+            <div class="catalogo__produtos">
+                <figure class="catalogo__produtoFigure">
+                    <img class="catalogo__produtoFigure__img" src="./img/produto.jpeg" alt="imagem do produto">
+                </figure>
+                <div class="catalogo__produtoTxt">
+                    <h2>Produto 5</h2>
+                    <p>Descrição do produto 5</p>
+                </div>
+            </div>
+            <div class="catalogo__produtos">
+                <figure class="catalogo__produtoFigure">
+                    <img class="catalogo__produtoFigure__img" src="./img/produto.jpeg" alt="imagem do produto">
+                </figure>
+                <div class="catalogo__produtoTxt">
+                    <h2>Produto 6</h2>
+                    <p>Descrição do produto 6</p>
+                </div>
+            </div>
+            <div class="catalogo__produtos">
+                <figure class="catalogo__produtoFigure">
+                    <img class="catalogo__produtoFigure__img" src="./img/produto.jpeg" alt="imagem do produto">
+                </figure>
+                <div class="catalogo__produtoTxt">
+                    <h2>Produto 7</h2>
+                    <p>Descrição do produto 7</p>
+                </div>
+            </div>
+        </section>
+        <section id="table" class="table">
+            <h2>Tabela de Preços</h2>
+            <div class="tabelaPreco">
+                <table class="tabelaPreco__tb">       
+                    <thead class="tbHead">
+                        <th class="tbHead__produto margin">Produto</th>
+                        <th class="tbHead__produto margin">Preço</th>
+                    </thead>
+                    <tbody class="tbBody">
+                        <tr class="tbBody__linha">
+                            <td class="tbBody__produto margin">Produto 1</td>
+                            <td class="tbBody__produto margin">R$ 10,00</td>                    
+                        </tr>
+                        <tr class="tbBody__linha">
+                            <td class="tbBody__produto margin">Produto 2</td>
+                            <td class="tbBody__produto margin">R$ 15,00</td>
+                        </tr>              
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section id="cadastro" class="cadastro">
+            <h2>Formulário de Cadastro</h2>
+            <div>
+                <form id="formCadastro" class="formCadastro" action="#" method="post">
+                    <div class="formCadastro__nome">
+                        <label for="nome">Nome</label>
+                        <input type="text" name="nome" id="nome" class="nomeInput inputWidth">
+                    </div>
+                    <div class="formCadastro__email">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" class="emailInput inputWidth">
+                    </div>
+                    <div class="formCadastro__telefone">
+                        <label for="telefone">Telefone</label>
+                        <input type="number" name="telefone" id="telefone" class="telefoneInput inputWidth">
+                    </div>
+                    <div class="formCadastro__msg">
+                        <label for="msg">Mensagem</label>
+                        <textarea id="msg" name="msg" rows="10" class="msgInput inputWidth" placeholder="Digite aqui sua mensagem..."></textarea>
+                    </div>
+                    <button type="submit" class="botaoenviar">Enviar</button>
+                </form>
+        </section>    
+    </main>
+    <footer>
+        <div class="footerDir">
+            <p>@2023 Cardápio/Catálogo Digital. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+
+    <script src="./scripts.js"></script>
+</body>
+</html>
