@@ -1,0 +1,10 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: rgb(255, 244, 244);
+}
+
+.navbar-brand {
+    font-size: 100px;
+}
