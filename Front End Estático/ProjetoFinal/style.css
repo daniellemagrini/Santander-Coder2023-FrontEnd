@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Open+Sans:wght@400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #0c0c0c;
+  background-color: rgb(255, 255, 255);
+  overflow-x: hidden;
+}
+
+.navbar-brand {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 3rem;
+  color: rgb(255, 255, 255);
+}
+
+.navbar-toggler {
+  margin: 1rem;
+}
+
+.user_option {
+  margin: 1rem 0;
+}
+
+.user_option a {
+  color: rgb(255, 255, 255);
+  margin: 0.5rem;
+}
+
+.user_option button {
+  color: rgb(255, 255, 255);
+  padding: 0.4rem 1.7rem;
+  margin: 0 0.5rem;
+}
+
+.size {
+  font-size: 1rem;
+}
+
+.navbar-collapse {
+  text-align: center; 
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+}
+
+
+.BackgroundArea {
+  position: relative;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.bg-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.bg-box img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.carousel {
+  color: rgb(255, 255, 255);
+  padding: 0.5rem;
+}
+
+.carousel h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 4.2rem;
+}
+
+.carousel p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.313rem;
+  padding: 0.5rem 0;
+}
+
+.carousel button {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  color: rgb(255, 255, 255);
+  padding: 0.5rem 2.7rem;
+}
+
+.offerImg {
+  border-radius: 50%;
+  border: 0.4rem solid rgb(255,190,51);
+  width: 11rem;
+  height: 11rem;
+}
+
+.offer h5 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  color: rgb(255, 255, 255);
+}
+
+.offer p {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 3rem;
+  color: rgb(255, 255, 255);
+}
+
+.offer span{
+  font-family: 'Dancing Script', cursive;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.2rem;
+  color: rgb(255, 255, 255);
+}
+
+.ourMenuHeader h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 3rem;
+  color: rgb(12, 12, 12);
+}
+
+.ourMenuBody a {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  text-decoration: none;
+  color: rgb(12, 12, 12);
+}
+
+.ourMenuBody__item:hover {
+  background-color: rgb(34, 40, 49);
+  border-radius: 1rem;
+  color: rgb(255, 255, 255);
+}
+
+.container-ourMenuCards {
+  background-color: rgb(241, 242, 243);
+  border: none;
+}
+
+.ourMenuCard h5 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+
+.ourMenuCard p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.4rem;
+}
+
+.heading_container h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 3rem;
+}
+
+.detail-box p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
