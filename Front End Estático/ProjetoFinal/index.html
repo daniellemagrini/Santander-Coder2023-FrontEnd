@@ -30,7 +30,7 @@
         <div class="container">
             <nav class="navbar navbar-dark">
                 <!-- Navbar brand -->
-                <a class="navbar-brand fs-1 p-1" href="index.html"><span>Feane</span></a>
+                <a class="navbar-brand fs-1 p-1 border-0" href="index.html"><span>Feane</span></a>
                 <!--Collapse button-->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuHamburguer"
                     aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Menu hamburguer">
@@ -38,17 +38,17 @@
                 </button>
                 <!--Collapse Content-->
                 <div class="collapse navbar-collapse" id="menuHamburguer">
-                    <div class="bg-dark">
-                        <h5 class="text-white h6 navbar-text">HOME</h5>
+                    <div class="menuHamburguerItens">
+                        <a href="#" class="text-white navbar-text menuHamburguerItem">HOME</a>
                     </div>
-                    <div class="bg-dark">
-                        <h5 class="text-white h6 navbar-text">MENU</h5>
+                    <div class="menuHamburguerItem">
+                        <a class="text-white navbar-text menuHamburguerItem">MENU</a>
                     </div>
-                    <div class="bg-dark">
-                        <h5 class="text-white h6 navbar-text">ABOUT</h5>
+                    <div class="menuHamburguerItem">
+                        <a class="text-white navbar-text menuHamburguerItem">ABOUT</a>
                     </div>
-                    <div class="bg-dark">
-                        <h5 class="text-white h6 navbar-text">BOOK TABLE</h5>
+                    <div class="menuHamburguerItem">
+                        <a class="text-white navbar-text menuHamburguerItem">BOOK TABLE</a>
                     </div>
                     <div class="user_option">
                         <a href="" class="user_option__user">
@@ -96,8 +96,8 @@
     </section>
 </div>
 <!--Ofertas-->
-<section class="pt-5">
-    <div class="card mx-3 mt-5 py-2 bg-dark bg-gradient text-white">
+<section class=" offers pt-5">
+    <div class="card mx-3 mt-4 py-2 bg-dark bg-gradient text-white">
         <div class="card-body d-flex">
             <img class="offerImg" src="./img/tastyThursday.jpg"
                 alt="Sanduiche grande com dois hamburgueres, salada e queijo">
@@ -133,44 +133,49 @@
             <a class="ourMenuBody__item px-3 py-1" href="#ourMenuPasta">Pasta</a>
             <a class="ourMenuBody__item px-3 py-1" href="#ourMenuFries">Fries</a>
         </div>
-        <div class="card ourMenuCards mt-3 border-0">
-            <div class="container-ourMenuCards">
-                <div class="ourMenuCardImg">
-                    <img src="./img/deliciousPasta.png" class="card-img-top p-4"
-                        alt="Macarrão com tomates e azeitonas servido em um prato">
-                </div>
-            </div>
-            <div class="card-body bg-dark bg-gradient text-white text-start ourMenuCard">
-                <h5 class="card-title">Delicious Pasta</h5>
-                <p class="card-text">Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit,
-                    magnam voluptatem repellendus sed eaque</p>
-                <div class="d-flex justify-content-between pt-3">
-                    <p class="text-white">R$ 18</p>
-                    <a href="#" class="btn btn-warning rounded-circle text-white"><i
-                            class="bi bi-cart-fill size"></i></a>
-                </div>
-            </div>
-
-            <div class="container-ourMenuCards mt-4">
-                <div class="ourMenuCardImg">
-                    <img src="./img/deliciousPasta1.png" class="card-img-top p-4"
-                        alt="Macarrão ao molho vermelho co queijo e manjerição em cima">
-                </div>
-            </div>
-            <div class="card-body bg-dark bg-gradient text-white text-start ourMenuCard">
-                <h5 class="card-title">Delicious Pasta</h5>
-                <p class="card-text">Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit,
-                    magnam voluptatem repellendus sed eaque</p>
-                <div class="d-flex justify-content-between pt-3">
-                    <p class="text-white">R$ 10</p>
-                    <a href="#" class="btn btn-warning rounded-circle text-white"><i
-                            class="bi bi-cart-fill size"></i></a>
-                </div>
-            </div>
-            <div id="ourMenuCardsHidden" class="container-ourMenuCardsHidden" style="display: none;">
+        <div class="ourMenu">
+            <!--Primeira coluna-->
+            <div class="card ourMenuCards mt-3 border-0">
                 <div class="container-ourMenuCards">
+                    <div class="ourMenuCardImg pb-4">
+                        <img src="./img/deliciousPasta.png" class="card-img-top p-4"
+                            alt="Macarrão com tomates e azeitonas servido em um prato">
+                    </div>
+                </div>
+                <div class="card-body bg-dark bg-gradient text-white text-start ourMenuCard">
+                    <h5 class="card-title">Delicious Pasta</h5>
+                    <p class="card-text">Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit,
+                        magnam voluptatem repellendus sed eaque</p>
+                    <div class="d-flex justify-content-between pt-3">
+                        <p class="text-white">R$ 18</p>
+                        <a href="#" class="btn btn-warning rounded-circle text-white"><i
+                                class="bi bi-cart-fill size"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="card ourMenuCards border-0">
+                <div class="container-ourMenuCards mt-3">
                     <div class="ourMenuCardImg">
-                        <img src="./img/deliciousBurguer.png" class="card-img-top p-4"
+                        <img src="./img/deliciousPasta1.png" class="card-img-top px-4 pt-4 pb-2"
+                            alt="Macarrão ao molho vermelho co queijo e manjerição em cima">
+                    </div>
+                </div>
+                <div class="card-body bg-dark bg-gradient text-white text-start ourMenuCard">
+                    <h5 class="card-title">Delicious Pasta</h5>
+                    <p class="card-text">Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit,
+                        magnam voluptatem repellendus sed eaque</p>
+                    <div class="d-flex justify-content-between pt-3">
+                        <p class="text-white">R$ 10</p>
+                        <a href="#" class="btn btn-warning rounded-circle text-white"><i
+                                class="bi bi-cart-fill size"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!--Seguna coluna-->
+            <div class="card ourMenuCards border-0 mt-4">
+                <div class="container-ourMenuCards">
+                    <div class="ourMenuCardImg pb-5">
+                        <img src="./img/deliciousBurguer.png" class="card-img-top px-4 pt-4 pb-2"
                             alt="Lanche feito com pão com gergelim, ketchup, maionese, queijo, um hamburguer, cebola, tomate e alface">
                     </div>
                 </div>
@@ -184,7 +189,9 @@
                                 class="bi bi-cart-fill size"></i></a>
                     </div>
                 </div>
-                <div class="container-ourMenuCards mt-4">
+            </div>
+            <div class="card ourMenuCards border-0 mt-4">
+                <div class="container-ourMenuCards">
                     <div class="ourMenuCardImg">
                         <img src="./img/deliciousPizza.png" class="card-img-top p-4"
                             alt="Pizza de Camarã com tomate e cebola">
@@ -200,6 +207,9 @@
                                 class="bi bi-cart-fill size"></i></a>
                     </div>
                 </div>
+            </div>
+            <!--Terceira coluna-->
+            <div class="card ourMenuCards border-0 mt-4">
                 <div class="container-ourMenuCards">
                     <div class="ourMenuCardImg">
                         <img src="./img/deliciousPizza1.png" class="card-img-top p-4"
@@ -216,8 +226,10 @@
                                 class="bi bi-cart-fill size"></i></a>
                     </div>
                 </div>
-                <div class="container-ourMenuCards mt-4">
-                    <div class="ourMenuCardImg">
+            </div>
+            <div class="card ourMenuCards border-0 mt-4">
+                <div class="container-ourMenuCards">
+                    <div class="ourMenuCardImg pb-5">
                         <img src="./img/deliciousFries.png" class="card-img-top p-4" alt="Batata frita">
                     </div>
                 </div>
@@ -231,6 +243,9 @@
                                 class="bi bi-cart-fill size"></i></a>
                     </div>
                 </div>
+            </div>
+            <!--Quarta coluna-->
+            <div class="card ourMenuCards mt-3 border-0">
                 <div class="container-ourMenuCards mt-4">
                     <div class="ourMenuCardImg">
                         <img src="./img/deliciousPizza2.png" class="card-img-top p-4"
@@ -248,13 +263,17 @@
                     </div>
                 </div>
             </div>
+            <div class="card ourMenuCards mt-3 border-0"></div>
         </div>
+    </div>
+    </div>
     </div>
     <div id="viewMoreOurMenu" class="viewMoreOurMenu d-flex justify-content-center m-4">
         <button class="viewMoreOurMenuBt btn btn-warning rounded-pill text-white my-4 px-5 py-2"
             onclick="showViewMoreMenu()">View More</button>
     </div>
 </section>
+<!--ABOUT-->
 <section class="about bg-dark bg-gradient text-white my-5">
     <div class="container">
         <div class="detail-box pt-5 px-1">
@@ -273,10 +292,132 @@
             <a href="#" class="btn btn-warning rounded-pill text-white py-2 px-5 my-3">Read More</a>
         </div>
         <div class="img-box d-flex justify-content-center p-3">
-            <img src="./img/about-img.png" class="w-75" alt="Desenho de um lanche aberto dando para ver todos seus ingredientes">
+            <img src="./img/about-img.png" class="w-75"
+                alt="Desenho de um lanche aberto dando para ver todos seus ingredientes">
         </div>
     </div>
 </section>
+<!--BOOK A TABLE FORM-->
+<section>
+    <form>
+        <div class="bookTableForm p-3">
+            <h2>Book a Table</h2>
+        </div>
+        <div class="mb-3 px-3">
+            <input type="text" class="form-control p-2" id="formBookName" aria-describedby="Seu Nome"
+                placeholder="Your Name">
+        </div>
+        <div class="mb-3 px-3">
+            <input type="number" class="form-control p-2" id="formBookPhone" aria-describedby="Seu Telefone"
+                placeholder="Phone Number">
+        </div>
+        <div class="mb-3 px-3">
+            <input type="email" class="form-control p-2" id="formBookEmail" aria-describedby="Seu Email"
+                placeholder="Your Email">
+        </div>
+        <div class="mb-3 px-3">
+            <select id="formBookPerson" class="form-select p-2" aria-describedby="Quantas pessoas?"
+                placeholder="How many persons?">
+                <option disabled selected>How many persons?</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+        </div>
+        <div class="mb-3 px-3">
+            <input type="date" class="form-control p-2" id="formBookDate" aria-describedby="Data"
+                placeholder="dd/mm/aaaa">
+        </div>
+        <button type="submit" class="btn btn-warning rounded-pill text-white py-2 px-5 m-3">Book Now</button>
+    </form>
+</section>
+<!--CUSTOMERS OPNIONS-->
+<section class="my-5">
+    <div class="customersOpnion text-center mb-4">
+        <h2>What Says Our Customers</h2>
+    </div>
+    <div class="d-flex flex-row justify-content-between m-3 gap-3">
+        <div class="card border-0">
+            <div class="card-body customers bg-dark bg-gradient text-white px-3 py-1 border rounded-3">
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                <h5 class="card-title">Moana Michell</h5>
+                <p>Magna Aliqua</p>
+            </div>
+            <div>
+                <i class="bi bi-caret-up-fill text-warning customersImgIcon"></i>
+                <img src="./img/MoanaMichell.jpg"
+                    class="card-img-bottom w-50 rounded-circle border border-warning border-4 my-4 customersImg"
+                    alt="Moana Michell sorrindo e comendo algo com um garfo na mão">
+            </div>
+        </div>
+        <div class="card border-0">
+            <div class="card-body customers bg-dark bg-gradient text-white px-3 py-1 border rounded-3">
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                <h5 class="card-title">Mike Hamell</h5>
+                <p>Magna Aliqua</p>
+            </div>
+            <div>
+                <i class="bi bi-caret-up-fill text-warning customersImgIcon"></i>
+                <img src="./img/MikeHamell.jpg"
+                    class="card-img-bottom w-50 rounded-circle border border-warning border-4 my-4 customersImg"
+                    alt="Mike Hamell posando para a foto">
+            </div>
+        </div>
+    </div>
+    <div class="customersBt my-5">
+        <button type="button" class="btn btn-warning rounded-circle text-white mx-1 my-3"><i
+                class="bi bi-chevron-left"></i></button>
+        <button type="button" class="btn btn-warning rounded-circle text-white mx-1 my-3"><i
+                class="bi bi-chevron-right"></i></button>
+    </div>
+</section>
+<!--FOOTER-->
+<footer class="footer_section py-5 mt-5">
+    <div class="container py-5 mt-5 bg-dark bg-gradient text-white">
+        <div class="row pt-5">
+            <div class="col-md-4 footer-col">
+                <div class="footer_contact text-center">
+                    <h3>Contact Us</h3>
+                    <div class="contact_link_box d-flex flex-column text-center gap-3 mt-4">
+                        <a href=""><i class="fa fa-map-marker px-2" aria-hidden="true"></i><span>Location</span></a>
+                        <a href=""><i class="fa fa-phone px-2" aria-hidden="true"></i><span>Call +01
+                                1234567890</span></a>
+                        <a href=""><i class="fa fa-envelope px-2" aria-hidden="true"></i><span>demo@gmail.com</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 footer-col">
+                <div class="footer_detail text-center mt-5">
+                    <h3 class="footer-logo">Feane</h3>
+                    <p>Necessary, making this the first true generator on the Internet. It uses a dictionary of
+                        over 200 Latin words, combined with</p>
+                    <div class="footer_social d-flex justify-content-center gap-2">
+                        <a href="#"><i class="bi bi-facebook text-white fs-3" aria-hidden="true"></i></a>
+                        <a href="#"><i class="bi bi-twitter text-white fs-3" aria-hidden="true"></i></a>
+                        <a href="#"><i class="bi bi-linkedin text-white fs-3" aria-hidden="true"></i></a>
+                        <a href="#"><i class="bi bi-instagram text-white fs-3" aria-hidden="true"></i></a>
+                        <a href="#"><i class="bi bi-pinterest text-white fs-3" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 footer-col footer_hours text-center mt-5">
+                <h3>Opening Hours</h3>
+                <p class="my-3">Everyday</p>
+                <p>10.00 Am -10.00 Pm</p>
+            </div>
+        </div>
+        <div class="footer-info text-center pt-5">
+            <p>
+                &copy;All Rights Reserved By <a class="text-white"
+                    href="https://www.linkedin.com/in/danielle-magrini-b205aa167/">Danielle Magrini</a><br><br>
+            </p>
+        </div>
+    </div>
+</footer>
+
 
 
 <!--Javascript-->
