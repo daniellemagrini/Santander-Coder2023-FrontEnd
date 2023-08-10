@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+:root {
+    --backgroundDivButtons: #7e40f6;
+}
+
+.gradient-custom-2 {
+    background: radial-gradient(50% 123.47% at 50% 50%, #00ff94 0%, #720059 100%),
+    linear-gradient(121.28deg, #669600 0%, #ff0000 100%),
+    linear-gradient(360deg, #0029ff 0%, #8fff00 100%),
+    radial-gradient(100% 164.72% at 100% 100%, #6100ff 0%, #00ff57 100%),
+    radial-gradient(100% 148.07% at 0% 0%, #fff500 0%, #51d500 100%);
+    background-blend-mode: screen, color-dodge, overlay, difference, normal;
+}
+
+.title-custom {
+    background: var(--backgroundDivButtons);
+    border-radius: 1rem;
+    backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    background-clip: padding-box;
+    box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.03);
+}
+
+.mask-custom {
+    background: rgba(24, 24, 16, 0.2);
+    border-radius: 1rem;
+    backdrop-filter: blur(25px);
+    border: 2px solid rgba(255, 255, 255, 0.05);
+    background-clip: padding-box;
+    box-shadow: 1rem 1rem 1rem rgba(46, 54, 68, 0.03);
+}
+
+.header_container {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+    gap: 10rem;
+} 
+
+.addTask, .filterTask {
+    display: flex;
+    flex-direction: column;
+    padding: 0.8rem;
+    background-color: var(--backgroundDivButtons);
+    border-radius: 1rem;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.input-label {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.addTask__inputButton, .filterTask__inputButton {
+    width: 100%;
+}
+
+.addTask__inputButton__input, .filterTask__inputButton__input {
+    padding: 0.5rem;
+    border-radius: 1rem;
+    border: none;
+    text-align: left;
+    width: 84%
+}
+
+.addTask__inputButton__button, .filterTask__inputButton__button {
+    border-radius: 1rem;
+    color: #00ff57;
+}
+
+.to-do-list-itens {
+    color: rgba(0, 0, 0);
+    background-color: var(--backgroundDivButtons);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    transition: .3s;
+    border: 2px solid rgba(123, 8, 8, 0);
+    border-radius: 1rem;
+    margin: 1rem 0;
+}
+
+.to-do-list h3 {
+    flex: 1;
+    font-size: 1.2rem;
+    color: rgb(255, 255, 255);
+}
+
+.to-do-list-buttons {
+    border: none;
+    background-color: var(--backgroundDivButtons);
+    padding: 1rem;
+    margin-left: 0.5rem;
+}
+
+.ItemCompleted, .to-do-list-buttonsItemCompleted {
+    background-color: rgb(76, 74, 74);
+    color: rgb(255, 255, 255);
+}
+
+.ItemCompleted h3 {
+    text-decoration: line-through;
+    font-size: 1rem;
+    font-style: italic;
+}
