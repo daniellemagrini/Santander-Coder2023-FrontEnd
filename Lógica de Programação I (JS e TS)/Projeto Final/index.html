@@ -45,43 +45,43 @@
                                     </div>
                                     <div class="addTask__inputButton">
                                         <input type="text" class="addTask__inputButton__input" name="addInput" id="addInput" placeholder="Levar carro para arrumar...">
-                                        <button type="submit" class="btn btn-add addTask__inputButton__button"><i class="fa-solid fa-square-plus fa-2xl" style="color: #6be619;"></i></button>
+                                        <button type="submit" class="btn btn-add addTask__inputButton__button addButton"><i class="fa-solid fa-square-plus fa-2xl addButton" style="color: #6be619;"></i></button>
                                     </div>
                                 </form>
                                 <div class="filterTask">
                                     <div class="filterTask__label">
-                                        <label for="todo" class="input-label">Pesquisar</label>
+                                        <label for="searchInput" class="input-label">Pesquisar</label>
                                     </div>
                                     <div class="filterTask__inputButton">
-                                        <input type="text" class="filterTask__inputButton__input" name="todo" id="todo" placeholder="carro...">
+                                        <input type="text" class="filterTask__inputButton__input" name="searchInput" id="searchInput" placeholder="carro...">
                                         <button class="btn btn-add filterTask__inputButton__button"><i class="fa-solid fa-magnifying-glass fa-xl" style="color: #19191a;"></i></button>
                                     </div>
                                 </div>
                             </div>
                             <!--TO DO LIST-->
                             <div id="to-do-list" class="to-do-list">
-                                <div id="to-do-list-itens" class="to-do-list-itens ItemCompleted">
+                                <div id="to-do-list-itens" class="to-do-list-itens">
                                     <h3>Tarefa a fazer...</h3>
                                     <button id="checkItem" class="to-do-list-buttons checkItem to-do-list-buttonsItemCompleted">
                                         <i class="fa-solid fa-clipboard-check fa-xl" style="color: #6bf50f;"></i>
                                     </button>
-                                    <button id="editItem" class="to-do-list-buttons editItem to-do-list-buttonsItemCompleted">
+                                    <button onclick="editTask()" id="editItem" class="to-do-list-buttons editItem to-do-list-buttonsItemCompleted">
                                         <i class="fa-solid fa-pen-to-square fa-xl" style="color: #fdf50d;"></i>
                                     </button>
                                     <button id="deleteItem" class="to-do-list-buttons deleteItem to-do-list-buttonsItemCompleted">
                                         <i class="fa-solid fa-trash fa-xl" style="color: #d82222;"></i>
                                     </button>
                                 </div>
-                                <div class="to-do-list-itens ItemCompleted">
+                                <div class="to-do-list-itens">
                                     <h3>Tarefa a fazer 2...</h3>
                                     <button class="to-do-list-buttons checkItem">
-                                        <i class="fa-solid fa-clipboard-check fa-xl" style="color: #6bf50f;"></i>
+                                        <i class="fa-solid fa-clipboard-check fa-xl to-do-list-buttons checkItem" style="color: #6bf50f;"></i>
                                     </button>
-                                    <button class="to-do-list-buttons editItem">
-                                        <i class="fa-solid fa-pen-to-square fa-xl" style="color: #fdf50d;"></i>
+                                    <button onclick="openModal('modalContainerEdit')" class="to-do-list-buttons editItem">
+                                        <i class="fa-solid fa-pen-to-square fa-xl editItem" style="color: #fdf50d;"></i>
                                     </button>
                                     <button class="to-do-list-buttons deleteItem">
-                                        <i class="fa-solid fa-trash fa-xl" style="color: #d82222;"></i>
+                                        <i class="fa-solid fa-trash fa-xl deleteItem" style="color: #d82222;"></i>
                                     </button>
                                 </div>
                             </div>
@@ -90,6 +90,21 @@
                 </div>
             </div>
         </div>
+        <!--MODAL EDIT-->
+        <div class="modalContainerEdit container py-5" id="modalContainerEdit">
+            <div class="modal">
+                <form id="editTask" class="editTask">
+                    <div class="editTask__label">
+                        <label for="editInput" class="input-label">Editar tarefa</label>
+                    </div>
+                    <div class="editTask__inputButton">
+                        <input type="text" class="editTask__inputButton__input" name="editInput" id="editInput" placeholder="Levar carro para arrumar...">
+                        <button type="submit" class="btn btn-add editTask__inputButton__button saveButton" id="saveButton">SALVAR</button>
+                        <button type="submit" class="btn btn-add editTask__inputButton__button cancelEditButton" id="cancelEditButton" onclick="closeModal('modalContainerEdit')">CANCELAR</button>
+                    </div>
+                </form>
+            </div>
+        </div>   
     </section>
 
     <!--Javascript-->

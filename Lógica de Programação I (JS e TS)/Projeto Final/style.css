@@ -11,6 +11,7 @@
 
 :root {
     --backgroundDivButtons: #7e40f6;
+    --backgroundIcons: #7d40f600;
 }
 
 .gradient-custom-2 {
@@ -73,13 +74,19 @@
     border-radius: 1rem;
     border: none;
     text-align: left;
-    width: 84%
+    width: 82%
 }
 
 .addTask__inputButton__button, .filterTask__inputButton__button {
     border-radius: 1rem;
     color: #00ff57;
+    border: none;
 }
+
+button:hover {
+    transform: scale(1.1);
+    transition: all 0.5s;
+} 
 
 .to-do-list-itens {
     color: rgba(0, 0, 0);
@@ -102,12 +109,12 @@
 
 .to-do-list-buttons {
     border: none;
-    background-color: var(--backgroundDivButtons);
+    background-color: var(--backgroundIcons);
     padding: 1rem;
     margin-left: 0.5rem;
 }
 
-.ItemCompleted, .to-do-list-buttonsItemCompleted {
+.ItemCompleted {
     background-color: rgb(76, 74, 74);
     color: rgb(255, 255, 255);
 }
@@ -116,4 +123,38 @@
     text-decoration: line-through;
     font-size: 1rem;
     font-style: italic;
+}
+
+.modalContainerEdit {
+    /*display: none;*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+}
+
+.modal {
+    margin: 0 auto;
+}
+
+.active {
+    display: flex;
+
+}
+
+.active .modal {
+    animation: modal 0.4s;
+}
+
+@keyframes modal {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
 }
