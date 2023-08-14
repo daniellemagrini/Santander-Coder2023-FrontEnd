@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!--Font Awesome-->    
+    <!--Font Awesome-->
     <script src="https://kit.fontawesome.com/9933f9e013.js" crossorigin="anonymous"></script>
 </head>
 
@@ -44,8 +44,12 @@
                                         <label for="addInput" class="input-label">Adicionar tarefa</label>
                                     </div>
                                     <div class="addTask__inputButton">
-                                        <input type="text" class="addTask__inputButton__input" name="addInput" id="addInput" placeholder="Levar carro para arrumar...">
-                                        <button type="submit" class="btn btn-add addTask__inputButton__button addButton"><i class="fa-solid fa-square-plus fa-2xl addButton" style="color: #6be619;"></i></button>
+                                        <input type="text" class="addTask__inputButton__input" name="addInput"
+                                            id="addInput" placeholder="Levar carro para arrumar...">
+                                        <button type="submit"
+                                            class="btn btn-add addTask__inputButton__button addButton"><i
+                                                class="fa-solid fa-square-plus fa-2xl addButton"
+                                                style="color: #6be619;"></i></button>
                                     </div>
                                 </form>
                                 <div class="filterTask">
@@ -53,58 +57,51 @@
                                         <label for="searchInput" class="input-label">Pesquisar</label>
                                     </div>
                                     <div class="filterTask__inputButton">
-                                        <input type="text" class="filterTask__inputButton__input" name="searchInput" id="searchInput" placeholder="carro...">
-                                        <button class="btn btn-add filterTask__inputButton__button"><i class="fa-solid fa-magnifying-glass fa-xl" style="color: #19191a;"></i></button>
+                                        <input type="text" class="filterTask__inputButton__input" name="searchInput"
+                                            id="searchInput" placeholder="carro...">
+                                        <button class="btn btn-add filterTask__inputButton__button"><i
+                                                class="fa-solid fa-magnifying-glass fa-xl"
+                                                style="color: #19191a;"></i></button>
                                     </div>
                                 </div>
                             </div>
                             <!--TO DO LIST-->
                             <div id="to-do-list" class="to-do-list">
-                                <div id="to-do-list-itens" class="to-do-list-itens">
-                                    <h3>Tarefa a fazer...</h3>
-                                    <button id="checkItem" class="to-do-list-buttons checkItem to-do-list-buttonsItemCompleted">
-                                        <i class="fa-solid fa-clipboard-check fa-xl" style="color: #6bf50f;"></i>
-                                    </button>
-                                    <button onclick="editTask()" id="editItem" class="to-do-list-buttons editItem to-do-list-buttonsItemCompleted">
-                                        <i class="fa-solid fa-pen-to-square fa-xl" style="color: #fdf50d;"></i>
-                                    </button>
-                                    <button id="deleteItem" class="to-do-list-buttons deleteItem to-do-list-buttonsItemCompleted">
-                                        <i class="fa-solid fa-trash fa-xl" style="color: #d82222;"></i>
-                                    </button>
-                                </div>
-                                <div class="to-do-list-itens">
-                                    <h3>Tarefa a fazer 2...</h3>
-                                    <button class="to-do-list-buttons checkItem">
-                                        <i class="fa-solid fa-clipboard-check fa-xl to-do-list-buttons checkItem" style="color: #6bf50f;"></i>
-                                    </button>
-                                    <button onclick="openModal('modalContainerEdit')" class="to-do-list-buttons editItem">
-                                        <i class="fa-solid fa-pen-to-square fa-xl editItem" style="color: #fdf50d;"></i>
-                                    </button>
-                                    <button class="to-do-list-buttons deleteItem">
-                                        <i class="fa-solid fa-trash fa-xl deleteItem" style="color: #d82222;"></i>
-                                    </button>
-                                </div>
+                                <h2>Tarefas a fazer</h2>
                             </div>
+                            <!--EDIT ITEN-->
+                            <form id="editTask" class="to-do-list-itens editTask hide">
+                                <h3>Editar Tarefa</h3>
+                                <input type="text" class="editInput" name="editInput" id="editInput">
+                                <button type="submit" id="saveButton"
+                                    class="to-do-list-buttons saveButton">SALVAR</button>
+                                <button type="submit" id="cancelButton"
+                                    class="to-do-list-buttons cancelButton">CANCELAR</button>
+                            </form>
+                            <!--MODAL EDIT-->
+                            <!-- <div class="modalEditForm">
+                                <form id="editTask" class="editTask">
+                                    <div class="editTask__label">
+                                        <label for="editInput" class="input-label">Editar tarefa</label>
+                                    </div>
+                                    <div class="editTask__inputButton">
+                                        <input type="text" class="editTask__inputButton__input" name="editInput"
+                                            id="editInput" placeholder="Levar carro para arrumar...">
+                                        <button type="submit"
+                                            class="btn btn-add editTask__inputButton__button saveButton"
+                                            id="saveButton">SALVAR</button>
+                                        <button type="submit"
+                                            class="btn btn-add editTask__inputButton__button cancelEditButton"
+                                            id="cancelEditButton"
+                                            onclick="closeModal('modalContainerEdit')">CANCELAR</button>
+                                    </div>
+                                </form>
+                            </div> -->
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!--MODAL EDIT-->
-        <div class="modalContainerEdit container py-5" id="modalContainerEdit">
-            <div class="modal">
-                <form id="editTask" class="editTask">
-                    <div class="editTask__label">
-                        <label for="editInput" class="input-label">Editar tarefa</label>
-                    </div>
-                    <div class="editTask__inputButton">
-                        <input type="text" class="editTask__inputButton__input" name="editInput" id="editInput" placeholder="Levar carro para arrumar...">
-                        <button type="submit" class="btn btn-add editTask__inputButton__button saveButton" id="saveButton">SALVAR</button>
-                        <button type="submit" class="btn btn-add editTask__inputButton__button cancelEditButton" id="cancelEditButton" onclick="closeModal('modalContainerEdit')">CANCELAR</button>
-                    </div>
-                </form>
-            </div>
-        </div>   
     </section>
 
     <!--Javascript-->
