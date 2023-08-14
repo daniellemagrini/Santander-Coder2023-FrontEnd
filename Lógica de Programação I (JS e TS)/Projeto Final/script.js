@@ -72,6 +72,22 @@ const updateTodoList = (text) => {
       });
 }
 
+const getSearchedTodos = (search) => {
+    const todoListall = document.querySelectorAll(".to-do-list-itens");
+  
+    todoListall.forEach((todoList) => {
+      const taskTitle = todoList.querySelector("h3").innerText.toLowerCase();
+  
+      todoList.style.display = "flex";
+  
+      console.log(taskTitle);
+  
+      if (!taskTitle.includes(search)) {
+        todoList.style.display = "none";
+      }
+    });
+  };
+
 
 //EVENTOS
 addTask.addEventListener("submit", (e) => {
@@ -130,3 +146,9 @@ editTask.addEventListener("submit", (e) => {
     }
     toggleForms(); // voltar ao formulário principal
 });
+
+searchInput.addEventListener("keyup", (e) => {
+    const search = e.target.value;
+  
+    getSearchedTodos(search);
+  });
