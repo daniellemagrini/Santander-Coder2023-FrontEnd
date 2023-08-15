@@ -89,7 +89,7 @@ button:hover {
     transition: all 0.5s;
 } 
 
-.to-do-list-itens {
+.to-do-list-itens, .to-do-list-itens2 {
     color: rgba(0, 0, 0);
     background-color: var(--backgroundDivButtons);
     display: flex;
