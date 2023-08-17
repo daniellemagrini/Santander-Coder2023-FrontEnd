@@ -14,6 +14,12 @@ let toDoList = [
     {
         id: 3,
         tarefa: "levar carro para lavar"
+    },
+    {
+        id: 4, tarefa: 'ir ao centro encontrar minha amiga'
+    },
+    { 
+        id: 5, tarefa: 'lavar a cabeca'
     }
 ]
 
@@ -99,22 +105,32 @@ function adicionarTarefa() {
 function editarTarefa() {
     
     try {
-        toDoList.forEach(element => {    
-            console.log(element);
-        });
+        listarTarefas2();
         let id = prompt('Qual tarefa gostaria de editar? Favor digitar o id da mesma ');
-        let tarefa = prompt('Digite o que gostaria de editar ');
-        const index = toDoList.indexOf(id);
+        const index = toDoList.findIndex(item => item.id === parseInt(id));
         
-        if (id) {
+        if (index !== -1) {
+            let tarefa = prompt('Digite o que gostaria de editar ');
             const tarefaEdit = toDoList.find((tarefa) => tarefa.id === parseInt(id));
             tarefaEdit.tarefa = tarefa;
             console.log("Tarefa editada com sucesso.");
-            mostrarMenu();
+            let opcao = prompt('Deseja editar outra tarefa? S/N ');
+            if (opcao.toUpperCase() === 'S') {
+                editarTarefa(1)
+            }
+            else {
+                mostrarMenu();
+            }
         }
         else {
             console.log("id não existe");
-            mostrarMenu();
+            let opcao = prompt('Deseja tentar novamente? S/N ');
+            if (opcao.toUpperCase() === 'S') {
+                editarTarefa(1)
+            }
+            else {
+                mostrarMenu();
+            }
         }
     } 
     catch (e) {
@@ -125,18 +141,18 @@ function editarTarefa() {
 function removerTarefa() {
 
     try {
-        toDoList.forEach(element => {    
-            console.log(element);
-        });
-        let idTarefa = prompt('Qual tarefa gostaria de remover? Favor digitar o id da mesma ');
-        const index = toDoList[idTarefa] = idTarefa;
-        
-        if (index >= 0) {
-            toDoList.splice((index - 1), 1);
+        listarTarefas2();
+        let id = prompt('Qual tarefa gostaria de remover da lista? Favor digitar o id da mesma ');
+        const index = toDoList.findIndex(item => item.id === parseInt(id));
+        console.log(index);
+        if (index !== -1) {
+            const tarefaRemover = toDoList.find((tarefa) => tarefa.id === parseInt(id));
+            toDoList.splice(index, 1);
             console.log("Tarefa removida com sucesso.");
+            listarTarefas2();
             let multiplasTarefas = prompt('Deseja remover outra tarefa? S/N ');
             if (multiplasTarefas.toUpperCase() === 'S') {
-                removerTarefa()
+                removerTarefa(1)
             }
             else {
                 mostrarMenu();
@@ -145,7 +161,7 @@ function removerTarefa() {
         else {
             console.log("id não existe");
             mostrarMenu();
-        }   
+        }
     } 
     catch (e) {
         console.log(e.message);    
@@ -155,10 +171,7 @@ function removerTarefa() {
 function listarTarefas() {
 
     try {
-        toDoList.forEach(element => {    
-            console.log(element);
-        });
-
+        listarTarefas2();
         let menu = prompt('Deseja voltar ao menu principal? S/N ');
         if (menu.toUpperCase() === 'S') {
             mostrarMenu()
@@ -171,6 +184,19 @@ function listarTarefas() {
         console.log(e.message);
     }
 }
+
+function listarTarefas2() {
+
+    try {
+        toDoList.forEach(element => {    
+            console.log(element);
+        });
+    } 
+    catch (e) {
+        console.log(e.message);
+    }
+}
+
 
 function procurarTarefa() {
 
