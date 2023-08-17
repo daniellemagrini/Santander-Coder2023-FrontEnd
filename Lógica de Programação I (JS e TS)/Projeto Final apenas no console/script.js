@@ -21,7 +21,7 @@ let toDoList = [
 //FUNÇÕES
 
 function mostrarMenu() {
-    let opcao = prompt(`\n${tracos.repeat(30)}\n        MENU DE OPÇÕES\n${tracos.repeat(30)}\n
+    console.log(`\n${tracos.repeat(30)}\n        MENU DE OPÇÕES\n${tracos.repeat(30)}\n
 Escolha a opção desejada digitando sua respectiva numeração: 
 
 1 - Adicionar Tarefa
@@ -33,14 +33,14 @@ Escolha a opção desejada digitando sua respectiva numeração:
 
 `);
 
-let opcaoInt = parseInt(opcao);
+let opcao = parseInt(prompt());
 
-    if (isNaN.opcaoInt) {
+    if (isNaN.opcao || opcao > 6 || opcao < 1) {
         console.log("Opção inválida.")
         return mostrarMenu() 
     }
     else {
-        escolhaMenu(opcaoInt);
+        escolhaMenu(opcao);
     }
 }
 
@@ -99,13 +99,16 @@ function adicionarTarefa() {
 function editarTarefa() {
     
     try {
-        listarTarefas()
+        toDoList.forEach(element => {    
+            console.log(element);
+        });
         let id = prompt('Qual tarefa gostaria de editar? Favor digitar o id da mesma ');
-        let tarefa = prompt('Digite a tarefa editada');
+        let tarefa = prompt('Digite o que gostaria de editar ');
         const index = toDoList.indexOf(id);
-        console
+        
         if (id) {
-            toDoList[index] = tarefa;
+            const tarefaEdit = toDoList.find((tarefa) => tarefa.id === parseInt(id));
+            tarefaEdit.tarefa = tarefa;
             console.log("Tarefa editada com sucesso.");
             mostrarMenu();
         }
@@ -117,8 +120,6 @@ function editarTarefa() {
     catch (e) {
         console.log(e.message);
     }
-
-    
 }
 
 function removerTarefa() {
@@ -134,12 +135,12 @@ function removerTarefa() {
             toDoList.splice((index - 1), 1);
             console.log("Tarefa removida com sucesso.");
             let multiplasTarefas = prompt('Deseja remover outra tarefa? S/N ');
-                if (multiplasTarefas.toUpperCase() === 'S') {
-                    removerTarefa()
-                }
-                else {
-                    mostrarMenu();
-                }
+            if (multiplasTarefas.toUpperCase() === 'S') {
+                removerTarefa()
+            }
+            else {
+                mostrarMenu();
+            }
         }
         else {
             console.log("id não existe");
