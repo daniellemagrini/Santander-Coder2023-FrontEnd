@@ -84,21 +84,11 @@ function adicionarTarefa() {
         tarefa;
         toDoList.push({id, tarefa});
         console.log("Tarefa adiciona com sucesso!")
-
-        let multiplasTarefas = prompt('Deseja adicionar outra tarefa? S/N ');
-            if (multiplasTarefas.toUpperCase() === 'S') {
-                escolhaMenu(1)
-            }
-            else if (multiplasTarefas.toUpperCase() === 'N') {
-                mostrarMenu();
-            }
-            else {
-                console.log("Opção inválida!")
-                mostrarMenu();
-            }
+        repetirAcao('adicionar');
     } 
     catch (e) {
         console.log(e.message);
+        throw console.error("Não foi possível adicionar a tarefa!"); 
     }
 }
 
@@ -114,27 +104,16 @@ function editarTarefa() {
             const tarefaEdit = toDoList.find((tarefa) => tarefa.id === parseInt(id));
             tarefaEdit.tarefa = tarefa;
             console.log("Tarefa editada com sucesso.");
-            let opcao = prompt('Deseja editar outra tarefa? S/N ');
-            if (opcao.toUpperCase() === 'S') {
-                editarTarefa(1)
-            }
-            else {
-                mostrarMenu();
-            }
+            repetirAcao('editar');
         }
         else {
             console.log("id não existe");
-            let opcao = prompt('Deseja tentar novamente? S/N ');
-            if (opcao.toUpperCase() === 'S') {
-                editarTarefa(1)
-            }
-            else {
-                mostrarMenu();
-            }
+            repetirAcao('editar');
         }
     } 
     catch (e) {
         console.log(e.message);
+        throw console.error("Não foi possível editar a tarefa!"); 
     }
 }
 
@@ -148,13 +127,7 @@ function removerTarefa() {
         if (index !== -1) {
             toDoList.splice(index, 1);
             console.log("Tarefa removida com sucesso.\n");
-            let multiplasTarefas = prompt('Deseja remover outra tarefa? S/N ');
-            if (multiplasTarefas.toUpperCase() === 'S') {
-                removerTarefa()
-            }
-            else {
-                mostrarMenu();
-            }
+            repetirAcao('remover');
         }
         else {
             console.log("id não existe");
@@ -162,7 +135,8 @@ function removerTarefa() {
         }
     } 
     catch (e) {
-        console.log(e.message);    
+        console.log(e.message);  
+        throw console.error("Não foi possível remover a tarefa!");   
     }  
 }
 
@@ -192,25 +166,26 @@ function listarTarefas2() {
     } 
     catch (e) {
         console.log(e.message);
+        throw console.error("Não foi possível listar as tarefas!"); 
     }
 }
 
 
 function procurarTarefa() {
-
     try {
         let tarefa = prompt('Digite uma palavra que tenha no título da tarefa ');
-        console.log(toDoList.filter(el => el.tarefa.includes(tarefa)));
-        let menu = prompt('Deseja procurar outra tarefa? S/N ');
-        if (menu.toUpperCase() === 'S') {
-            procurarTarefa()
+        let tarefasFiltradas = toDoList.filter(el => el.tarefa.includes(tarefa));
+        if(tarefasFiltradas.length != 0) {
+            console.log (tarefasFiltradas);
         }
         else {
-            mostrarMenu();
-        }
+            console.log ("Nenhuma tarefa encontrada");
+        }       
+        repetirAcao('procurar');
     } 
     catch (e) {
-        console.log(e.message);  
+        console.log(e.message); 
+        throw console.error("Não foi possível procurar a tarefa!"); 
     }
 }
 
@@ -219,6 +194,41 @@ function sair() {
     console.log("Até mais tarde!\n")
     process.exit()
 }
+
+function repetirAcao(acao) {
+    let multiplasTarefas = prompt(`Deseja ${acao} outra tarefa? S/N `);
+    if (multiplasTarefas.toUpperCase() === 'S') {
+        if(acao == 'adicionar')
+        {
+            adicionarTarefa();
+        }
+        else if (acao == 'editar') 
+        {
+            editarTarefa();
+        }
+        else if (acao == 'remover') 
+        {
+            removerTarefa();
+        }
+        else if (acao == 'procurar') 
+        {
+            procurarTarefa();
+        }
+        else {
+            console.log("Opção inválida!")
+            mostrarMenu();
+        }
+        
+    }
+    else if (multiplasTarefas.toUpperCase() === 'N') {
+        mostrarMenu();
+    }
+    else {
+        console.log("Opção inválida!");
+        mostrarMenu();
+    }
+}
+
 
 // CHAMADAS
 const prompt = require('prompt-sync')();
