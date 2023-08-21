@@ -144,15 +144,13 @@ function removerTarefa() {
         listarTarefas2();
         let id = prompt('Qual tarefa gostaria de remover da lista? Favor digitar o id da mesma ');
         const index = toDoList.findIndex(item => item.id === parseInt(id));
-        console.log(index);
+        
         if (index !== -1) {
-            const tarefaRemover = toDoList.find((tarefa) => tarefa.id === parseInt(id));
             toDoList.splice(index, 1);
-            console.log("Tarefa removida com sucesso.");
-            listarTarefas2();
+            console.log("Tarefa removida com sucesso.\n");
             let multiplasTarefas = prompt('Deseja remover outra tarefa? S/N ');
             if (multiplasTarefas.toUpperCase() === 'S') {
-                removerTarefa(1)
+                removerTarefa()
             }
             else {
                 mostrarMenu();
