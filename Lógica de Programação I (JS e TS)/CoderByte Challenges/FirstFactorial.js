@@ -16,3 +16,15 @@ function FirstFactorial(num) {
      
   // keep this function call here 
   console.log(FirstFactorial(readline()));
+
+
+  //Com recursividade:
+function fatorial(num) {
+ if (num <= 1)
+  return 1;
+ else
+  return num * fatorial(num-1);
+}
+
+// keep this function call here 
+console.log(fatorial(readline()));

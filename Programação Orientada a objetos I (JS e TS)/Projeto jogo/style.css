@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Indie Flower', cursive;
+    font-weight: 400;
+}
+
+:root {
+  --green: rgb(99, 170, 99);
+  --blue: rgba(78, 165, 218, 1);
+  --yellow: rgba(250, 219, 69, 1);
+  --red: rgba(220, 72, 105, 1);
+  --black: rgb(19, 9, 11);
+  --white: rgb(241, 241, 241);
+}
+
+#ludoPlayPrincipal {
+  background: linear-gradient(270deg, var(--yellow) 0%, var(--green) 34.9%, var(--red) 67.19%, var(--blue) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.container-body {
+  display: flex;
+  gap: 2rem;
+  background-image: url(./img/plano_de_fundo.png);
+}
+
+#QtdeJogadores {
+  height: 50%;
+}
+
+#Jogadores {
+  width: 26rem;
+  height: 9rem;
+}
+
+.container-jogadores {
+  margin-top: 6rem;
+  margin-left: 5.3rem;
+}
+
+#titleQtdeJogadores {
+  line-height: 4.5rem;
+}
+
+.container-box-jogadores {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: space-between;
+  align-items: start;
+  margin-top: 3rem;
+  margin-left: 4rem;
+}
+
+.box-jogadores {
+  background-color: var(--white);
+  width: 18rem;
+  height: 4rem;
+  box-shadow: -0.5rem -0.5rem 0.5rem 0px rgba(0, 0, 0, 0.237)
+}
+
+.box-jogadores p {
+  font-size: 2.5rem;
+  text-align: center;
+  vertical-align: middle;
+}
+
+
+.green{
+  background-color: var(--green);
+}
+
+.red{
+  background-color: var(--red);
+}
+
+.blue{
+  background-color: var(--blue);
+}
+
+.yellow{
+  background-color: var(--yellow);
+}
+
+.row{
+  display: flex;
+}
+
+.board{
+  width: fit-content;
+  border: 0.6rem solid var(--black);
+  border-radius: 0.3rem;
+  margin: 0.6rem auto;
+}
+
+.white-box{
+  background-color: var(--white);
+  width: 9.4rem;
+  height: 9.4rem;
+  margin: 16% auto;
+  border: 1px solid var(--black);
+}
+
+.red-box{
+  background-color: var(--red);
+  width: 15.6rem;
+  height: 15.6rem;
+  border: 1px solid var(--black);
+}
+
+.green-box{
+  background-color: var(--green);
+  width: 15.6rem;
+  height: 15.6rem;
+  border: 1px solid var(--black);
+}
+
+.blue-box{
+  background-color: var(--blue);
+  width: 15.6rem;
+  height: 15.6rem;
+  border: 1px solid var(--black);
+}
+
+.yellow-box{
+  background-color: var(--yellow);
+  width: 15.6rem;
+  height: 15.6rem;
+  border: 1px solid var(--black);
+}
+
+.white-big-circle {
+  border-radius: 50%;
+  border: 0.5rem solid var(--white);
+  height: 15rem;
+  margin: 0.3rem;
+}
+
+.white-box .circle{
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  float: left;
+  margin: 1rem;
+  border: 1px solid var(--black);
+}
+
+.cell{
+  width: 2.58rem;
+  height: 2.6rem;
+  border: 1px solid var(--black);
+}
+
+.destination{
+  border-top: 4rem solid var(--blue);
+  border-left: 4rem solid var(--green);
+  border-right: 4rem solid var(--yellow);
+  border-bottom: 4rem solid var(--red);
+}
+
+.piece {
+  margin-top: 0.2rem;
+}
