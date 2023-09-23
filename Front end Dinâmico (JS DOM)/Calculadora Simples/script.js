@@ -1,54 +1,69 @@
 const resultado = document.getElementById("resultado"); 
 const resultadoHistorico = document.getElementById("resultadoHistorico"); 
-const limparC = document.getElementById("btnC"); 
-const limparCE = document.getElementById("btnCE"); 
-const btnDividir = document.getElementById("btnDividir"); 
-const btnMultiplicar = document.getElementById("btnMultiplicar"); 
-const btnSubtrair = document.getElementById("btnSubtrair"); 
-const btnSomar = document.getElementById("btnSomar"); 
-const btnEnter = document.getElementById("btnEnter"); 
-const btnPonto = document.getElementById("btnPonto"); 
 const numeros = document.querySelectorAll("[id*=num]");
 const operadores = document.querySelectorAll("[id*=btn]");
 
 let op;
+let contador = 0;
 
 numeros.forEach((btn) => {
     btn.addEventListener("click", (e) => {
         const value = e.target.innerText;
-        resultado.innerText += value;
+        contador += 1;
+        if (contador < 12) {
+            resultado.innerText += value;
+        }
     });
 });
 
 operadores.forEach((btn) => {
     btn.addEventListener("click", (e) => {
         const value = e.target.innerText;
-        if(value === "C") {
-            limparTudo();
-        }
-        else if (value === "CE") {
-            limpar();
-        }
-        else if (value === ".") {
-            resultado.innerText += value;
-        }
-        else if (resultadoHistorico.innerText === "") {
-            resultadoHistorico.innerText += resultado.textContent + value;
+        contador =0;
+        validacoesClique(value);
+    });
+});
+
+function validacoesClique(value) {
+    if(value === "C") {
+        limparTudo();
+    }
+    else if (value === "CE") {
+        limpar();
+    }
+    else if (value === ".") {
+        resultado.innerText += value;
+    }
+    else if (resultadoHistorico.innerText === "") {
+        if (value === "Enter") {
+            resultadoHistorico.innerText = "";
             resultado.innerText = "";
         }
         else {
-            if (resultadoHistorico.innerText.includes("+") || resultadoHistorico.innerText.includes("-") || resultadoHistorico.innerText.includes("x") || resultadoHistorico.innerText.includes("÷")) {
-                calculo(resultado.textContent);
-                resultado.innerText = "";
-            }
-            else {
-                resultadoHistorico.innerText = "";
-                resultadoHistorico.innerText += resultado.textContent + value;
-                resultado.innerText = "";
-            }
+            resultadoHistorico.innerText += resultado.textContent + value;
+            resultado.innerText = "";
+        }  
+    }
+    else if (resultadoHistorico.innerText.slice(-1) != "+" && resultadoHistorico.innerText.slice(-1) != "-" && resultadoHistorico.innerText.slice(-1) != "x" && resultadoHistorico.innerText.slice(-1) != "÷") {
+        if (value === "Enter") {
+            limpar();
+        }
+        else {
+            resultadoHistorico.innerText += value; 
         }    
-    });
-});
+    }
+    else {
+        if (resultadoHistorico.innerText.includes("+") || resultadoHistorico.innerText.includes("-") || resultadoHistorico.innerText.includes("x") || resultadoHistorico.innerText.includes("÷")) {
+            calculo(resultado.textContent);
+            resultado.innerText = "";
+        }
+        else {
+            resultadoHistorico.innerText = "";
+            resultadoHistorico.innerText += resultado.textContent + value;
+            resultado.innerText = "";
+        }
+    }    
+}
 
 function calculo(num) {
     op = /\+|-|÷|x/;
@@ -77,7 +92,23 @@ function calculo(num) {
     else {
         resultadoHistorico.innerText = resultado.textContent;
     }
-    
+}
+
+function calculo2(num1, op, num2) {
+    switch (op) {
+        case "+":
+            resultadoHistorico.innerText = somar(num1, num2);
+            break;
+        case "-":
+            resultadoHistorico.innerText = subtrair(num1, num2);
+            break;
+        case "x":
+            resultadoHistorico.innerText = multiplicacao(num1, num2);
+            break;
+        case "÷":
+            resultadoHistorico.innerText = divisao(num1, num2);
+            break;
+    }
 }
 
 function limparTudo() {
