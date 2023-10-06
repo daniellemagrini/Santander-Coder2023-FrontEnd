@@ -167,3 +167,39 @@
 .piece {
   margin-top: 0.2rem;
 }
+
+.container-dado {
+  background-color: var(--white);
+  margin-top: 8rem;
+  margin-left: 5.3rem;
+  width: 24rem;
+  height: 16rem;
+  position: relative;
+  border-radius: 1.5rem;
+}
+
+.container-box-dado {
+  background-color: var(--black);
+  width: 16rem;
+  height: 12rem;
+  position: absolute;
+  left: 4.2rem;
+  top: 2rem;
+  border-radius: 1.5rem;
+}
+
+.facesDado {
+  height: 5rem;
+  position: absolute;
+  left: 5.5rem;
+  top: 4rem;
+  border-radius: 10%;
+}
+
+.hidden {
+  display: none;
+}
+
+.facesDado {
+  transform: rotateX(360deg) rotateY(720deg) rotateZ(360deg);
+}

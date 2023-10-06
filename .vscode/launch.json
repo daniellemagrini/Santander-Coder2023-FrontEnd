@@ -5,13 +5,11 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "node",
+            "type": "chrome",
             "request": "launch",
-            "name": "Launch Program",
-            "skipFiles": [
-                "<node_internals>/**"
-            ],
-            "program": "${workspaceFolder}\\Lógica de Programação I (JS e TS)\\Projeto Final apenas no console\\script.js"
+            "name": "Launch Chrome against localhost",
+            "url": "http://127.0.0.1:5500/Front%20end%20Din%C3%A2mico%20(JS%20DOM)/CRUD%20-%20LIVROS/login.html",
+            "webRoot": "${workspaceFolder}"
         }
     ]
 }
