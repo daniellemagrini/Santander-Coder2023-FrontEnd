@@ -1,0 +1,149 @@
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Livromania</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="../img/shortcut_iconLivro.jpg" type="">
+  <link rel="stylesheet" href="./styleMain.css">
+
+  <!--Font Awesome-->
+  <script src="https://kit.fontawesome.com/9933f9e013.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+        <div class="livromaniaLogo">
+          <a id="logo" href="#home"><img src="../img/logo.png" alt="Logo Image" style="height: 4rem; width: 3rem;"></a>
+        </div>      
+        <nav class="sub-nav" style="display: none;">
+          <input id="searchbarAdm" type="text" name="searchbar" placeholder="procurar...">       
+        </nav>      
+    </header>
+    <section id="main-container" class="main-container" >
+        <div id="containerBotoes" class="botoes">
+            <button id="btnListaUsuarios">LISTA DE USUÁRIOS</button>
+            <button id="btnListaLivros">LISTA DE LIVROS</button>
+            <button id="btnAddLivro">ADICIONAR LIVRO</button>
+            <button id="btnAddUsuario">ADICIONAR USUÁRIO</button>
+            <button id="btnEditarLivro">EDITAR LIVRO</button>
+            <button id="btnEditarUsuario">EDITAR USUÁRIO</button>
+            <button id="btnRemoverLivro">REMOVER LIVRO</button>
+            <button id="btnRemoverUsuario">REMOVER USUÁRIO</button>
+            <button id="btnSair">SAIR</button>
+        </div>
+        <div id="containerlistaUsuarios" class="containerlistaUsuarios" style="display: none;">
+            <table id="tbListaUsuarios">                 
+                <tr>
+                    <th id="idUsuario" class="titulo">ID</th>
+                    <th id="cpfUsuario" class="titulo">CPF</th>
+                    <th id="nomeUsuario" class="titulo">NOME</th>
+                    <th id="emailUsuario" class="titulo">EMAIL</th>
+                    <th id="senhaUsuario" class="titulo">SENHA</th>
+                    <th id="tipoUsuario" class="titulo">TIPO</th>
+                </tr>        
+            </table>
+        </div>
+        <div id="containerlistaLivros" class="containerlistaLivros" style="display: none;">
+            <table id="tbListaLivros">                 
+                <tr>
+                    <th id="idLivro" class="titulo">ID</th>
+                    <th id="tituloLivro" class="titulo">TÍTULO</th>
+                    <th id="descricaoLivro" class="titulo">DESCRIÇÃO</th>
+                    <th id="valorLivro" class="titulo">VALOR</th>
+                    <th id="imagemLivro" class="titulo">IMAGEM</th>
+                    <th id="urlLivro" class="titulo">URL</th>
+                    <th id="categaroiaLivro" class="titulo">CATEGORIA</th>
+                </tr>        
+            </table>
+        </div>
+        <div id="containerAddLivro" class="containerAddLivro" style="display: none;">
+            <h2>Adicionar Livro</h2>
+            <form id="formAddLivro" class="form" action="" method="post">
+                <div class="inputBox">
+                    <label id="lblTituloLivro" class="lblTituloLivro" for="tituloLivro">Título</label>
+                    <input id="tituloLivro" class="inputAdd" type="text" name="tituloLivro" placeholder="Título do livro" required>
+                </div>  
+                <div class="inputBox">
+                    <label id="lblDescricaoLivro" class="lblDescricaoLivro" for="descricaoLivro">Descrição</label>
+                    <input id="descricaoLivro" class="inputAdd" type="text" name="descricaoLivro" placeholder="Descrição breve do livro" required>
+                </div> 
+                <div class="inputBox">
+                    <label id="lblValorLivro" class="lblValorLivro" for="valorLivro">Valor</label>
+                    <input id="valorLivro" class="inputAdd" type="text" name="valorLivro" placeholder="Valor do livro" required>
+                </div>
+                <div class="inputBox">
+                    <label id="lblImagemLivro" class="lblImagemLivro" for="imagemLivro">Nome do arquivo(com extensão)</label>
+                    <input id="imagemLivro" class="inputAdd" type="text" name="imagemLivro" placeholder="Nome do arquivo com extensão" required>
+                </div>
+                <div class="inputBox">
+                    <label id="lblUrlLivro" class="lblUrlLivro" for="urlLivro">URL para compra</label>
+                    <input id="urlLivro" class="inputAdd" type="text" name="urlLivro" placeholder="url para compra" required>
+                </div>
+                <div class="inputBox">
+                    <label id="lblCategoriaLivro" class="lblCategoriaLivro" for="categoriaLivro">Categoria</label>
+                    <input id="categoriaLivro" class="inputAdd" type="text" name="categoriaLivro" placeholder="Categoria do livro" required>
+                </div>
+                <div class="inputBox">
+                    <button id="botaoAddLivroSalvar" class="botaoAdm" type="submit">SALVAR</button>
+                    <button id="botaoAddLivroVoltar" class="botaoAdm">VOLTAR</button>
+                </div>
+            </form>
+        </div>
+        <div id="containerAddUsuario" class="containerAddUsuario" style="display: none;">
+            <h2>Adicionar Usuário</h2>
+            <form id="formAddUsuario" class="form" action="" method="post">
+                <div class="inputBox">
+                    <label id="lblCpfUsuario" class="lblCpfUsuario" for="cpfUsuario">CPF</label>
+                    <input id="cpfUsuario" class="inputAdd" type="text" name="cpfUsuario" placeholder="CPF do Usuário" required>
+                </div>  
+                <div class="inputBox">
+                    <label id="lblNomeUsuario" class="lblNomeUsuario" for="nomeUsuario">Nome Completo</label>
+                    <input id="nomeUsuario" class="inputAdd" type="text" name="nomeUsuario" placeholder="Nome completo" required>
+                </div> 
+                <div class="inputBox">
+                    <label id="lblEmailUsuario" class="lblEmailUsuario" for="emailUsuario">E-mail</label>
+                    <input id="emailUsuario" class="inputAdd" type="text" name="emailUsuario" placeholder="e-mail" required>
+                </div>
+                <div class="inputBox">
+                    <label id="lblSenhaUsuario" class="lblSenhaUsuario" for="senhaUsuario">Senha</label>
+                    <input id="senhaUsuario" class="inputAdd" type="text" name="senhaUsuario" placeholder="Senha" required>
+                </div>
+                <div class="inputBox">
+                    <button id="botaoAddUsuarioSalvar" class="botaoAdm" type="submit">SALVAR</button>
+                    <button id="botaoAddUsuarioVoltar" class="botaoAdm">VOLTAR</button>
+                </div>
+            </form>
+        </div>
+        <div id="containerRemoverLivro" class="containerRemoverLivro" style="display: none;">
+            <h2>Remover Livro</h2>
+            <form id="formRemoverLivro" class="form" action="" method="post">
+                <div class="inputBox">
+                    <label id="lblIdLivro" class="lblIdLivro" for="idLivro">Id do Livro</label>
+                    <input id="idLivroRemover" class="inputAdd" type="text" name="idLivro" placeholder="Id do livro" required>
+                </div>  
+                <div class="inputBox">
+                    <button id="botaoRemoverLivroRemover" class="botaoAdm" type="submit">REMOVER</button>
+                    <button id="botaoRemoverLivroVoltar" class="botaoAdm">VOLTAR</button>
+                </div>
+            </form>
+        </div>
+        <div id="containerRemoverUsuario" class="containerRemoverUsuario" style="display: none;">
+            <h2>Remover Usuario</h2>
+            <form id="formRemoverUsuario" class="form" action="" method="post">
+                <div class="inputBox">
+                    <label id="lblIdUsuario" class="lblIdUsuario" for="idUsuario">Id do Usuario</label>
+                    <input id="idUsuarioRemover" class="inputAdd" type="text" name="idUsuario" placeholder="Id do Usuario" required>
+                </div>  
+                <div class="inputBox">
+                    <button id="botaoRemoverUsuarioRemover" class="botaoAdm" type="submit">REMOVER</button>
+                    <button id="botaoRemoverUsuarioVoltar" class="botaoAdm">VOLTAR</button>
+                </div>
+            </form>
+        </div>
+      </section>  
+  </div>
+
+  <script type="module" src="./adm.js"></script>
+</body>
+</html>

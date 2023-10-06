@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Quicksand', sans-serif;
+}
+body 
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: #000;
+}
+section 
+{
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0.1rem;
+	flex-wrap: wrap;
+	overflow: hidden;
+}
+section::before 
+{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(#000,#0f0,#000);
+	animation: animate 5s linear infinite;
+}
+@keyframes animate 
+{
+	0%
+	{
+		transform: translateY(-100%);
+	}
+	100%
+	{
+		transform: translateY(100%);
+	}
+}
+section span 
+{
+	position: relative;
+	display: block;
+	width: calc(6.25vw - 2px);
+	height: calc(6.25vw - 2px);
+	background: #181818;
+	z-index: 2;
+	transition: 1.5s;
+}
+
+section .signin, .recuperarSenha, .cadastroUsuario
+{
+	position: absolute;
+	width: 25rem;
+  	background: #222;  
+	z-index: 1000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 2.5rem;
+	border-radius: 0.25rem;
+	box-shadow: 0 1rem 2.1rem rgba(0,0,0,9);
+}
+section .signin .content, .recuperarSenha .content, .cadastroUsuario .content
+{
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 2.5rem;
+}
+section .signin .content h2, .recuperarSenha .content h2, .cadastroUsuario .content h2
+{
+	font-size: 2rem;
+	color: #0f0;
+	text-transform: uppercase;
+}
+section .signin .content .form, .recuperarSenha .content .form, .cadastroUsuario .content .form
+{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+section .signin .content .form .inputBox,
+.recuperarSenha .content .form .inputBox, 
+.cadastroUsuario .content .form .inputBox
+{
+	position: relative;
+	width: 100%;
+}
+section .signin .content .form .inputBox input,
+.recuperarSenha .content .form .inputBox input,
+.cadastroUsuario .content .form .inputBox input  
+{
+	position: relative;
+	width: 100%;
+	background: #333;
+	border: none;
+	outline: none;
+	padding: 1.5rem 0.6rem 0.5rem;
+	border-radius: 0.25rem;
+	color: #fff;
+	font-weight: 500;
+	font-size: 1rem;
+}
+.signin .content .form .inputBox input:focus ~ i,
+.signin .content .form .inputBox input:valid ~ i,
+.recuperarSenha .content .form .inputBox input:focus ~ i,
+.recuperarSenha .content .form .inputBox input:valid ~ i,
+.cadastroUsuario .content .form .inputBox input:focus ~ i,
+.cadastroUsuario .content .form .inputBox input:valid ~ i
+{
+	transform: translateY(-0.5rem);
+	font-size: 0.8rem;
+	color: #fff;
+}
+.signin .content .form .links, .cadastroUsuario .content .form .links 
+{
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 2rem;
+}
+.signin .content .form .links a
+{
+	color: #fff;
+	text-decoration: none;
+}
+.signin .content .form .links a:nth-child(2)
+{
+	color: #0f0;
+	font-weight: 600;
+}
+.signin .content .form .inputBox input[type="submit"],
+.recuperarSenha .content .form .inputBox input[type="submit"],
+.cadastroUsuario .content .form .inputBox input[type="submit"]
+{
+	padding: 0.6rem;
+	background: #0f0;
+	color: #000;
+	font-weight: 600;
+	font-size: 1.35rem;
+	letter-spacing: 0.05rem;
+	cursor: pointer;
+}
+input[type="submit"]:active
+{
+	opacity: 0.6;
+}
+
+.mostrarSenha {
+	position: absolute;
+	top: 10;
+	right: 0;
+	width: 5.75rem;
+	height: 50%;
+	background: #333;
+	border: 0.3rem solid #222;
+	cursor: pointer;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+  }
+  
+.mostrarSenha::before {
+	content: "Mostrar";
+	font-size: 0.6rem;
+	color: aliceblue;
+	letter-spacing: 0.15rem;
+	text-transform: uppercase;
+  }
+  
+.mostrarSenha.hide::before {
+	content: "Esconder";
+  }
+
+.forcaSenha {
+	width: 100%;
+	height: 0.2rem;
+	background: #222;
+	margin-top: 1.5rem;
+  }
+  
+.forcaSenha::before {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0.5rem;
+	transition: 0.5s;
+	background: #f00;
+  }
+  
+.fraca .forcaSenha::before {
+	width: 10%;
+	background: #f00;
+	filter: drop-shadow(0 0 0.3rem #f00);
+  }
+  
+.moderada .forcaSenha::before {
+	width: 70%;
+	background: #eedc3d;
+	filter: drop-shadow(0 0 0.3rem #eedc3d);
+	  
+  }
+  
+.forte .forcaSenha::before {
+	width: 100%;
+	background: #18e605;
+	filter: drop-shadow(0 0 0.3rem #18e605);
+  }
+  
+.forcaSenha::after {
+	position: absolute;
+	top: 30rem;
+	transition: 0.5s;
+	color: aliceblue;
+  }
+
+.fraca .forcaSenha::after {
+	content: "Senha fraca";
+	color: #f00;
+	filter: drop-shadow(0 0 0.3rem #f00);
+  }
+  
+.moderada .forcaSenha::after {
+	content: "Senha Moderada";
+	color: #eedc3d;
+	filter: drop-shadow(0 0 0.3rem #eedc3d);
+  }
+  
+.forte .forcaSenha::after {
+	content: "Senha Forte";
+	color: #18e605;
+	filter: drop-shadow(0 0 0.3rem #18e605);
+  }
+
+.naoValido {
+	width: 100%;
+	height: 1%;
+	margin: 0.3rem 0 0 0.3rem;
+	color: #e60505;
+	background-color: #222;
+	font-weight: 600;
+  }
+
+.aExit, .exitCadastro {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 1rem;
+}
+
+.lblCadastro {
+	color: #fff;
+}
+
+
+@media (max-width: 900px)
+{
+	section span 
+	{
+		width: calc(10vw - 2px);
+		height: calc(10vw - 2px);
+	}
+}
+@media (max-width: 600px)
+{
+	section span 
+	{
+		width: calc(20vw - 2px);
+		height: calc(20vw - 2px);
+	}
+}
+
